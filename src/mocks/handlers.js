@@ -1,8 +1,8 @@
-import { response, rest } from "msw";
+import { rest } from "msw";
 
 export const handlers = [
-  rest.get("http://localhost3030/scoops", (request, resolve, context) => {
-    return response(
+  rest.get("http://localhost:3030/scoops", (request, resolve, context) => {
+    return resolve(
       context.json([
         {
           name: "Chocolate",
