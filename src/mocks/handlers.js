@@ -6,12 +6,21 @@ export const handlers = [
       context.json([
         {
           name: "Chocolate",
-          image: "/images/chocolate.png",
+          imagePath: "/images/chocolate.png",
         },
         {
           name: "Vanilla",
-          image: "/images/vanilla.png",
+          imagePath: "/images/vanilla.png",
         },
+      ])
+    );
+  }),
+  rest.get("http://localhost:3030/toppings", (request, resolve, context) => {
+    return resolve(
+      context.json([
+        { name: "Cherries", imagePath: "/images/cherries.png" },
+        { name: "M&Ms", imagePath: "/images/m-and-ms.png" },
+        { name: "Hot fudge", imagePath: "/images/hot-fudge.png" },
       ])
     );
   }),
