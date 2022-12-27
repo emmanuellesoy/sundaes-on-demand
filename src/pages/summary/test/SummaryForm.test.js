@@ -1,6 +1,7 @@
 import { screen, render } from "@testing-library/react";
-import SummaryForm from "../SummaryForm";
 import userEvent from "@testing-library/user-event";
+
+import SummaryForm from "../SummaryForm";
 
 describe("SummaryForm", () => {
   test("initial state", () => {
